@@ -1,0 +1,87 @@
+
+/* Changes approved for Version 5. Preserve Version 3 colour system. */
+.hero-backdrop{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-template-rows:1fr!important;padding:8vh 4vw 5vh!important;gap:1vw!important;opacity:.09!important;align-items:center!important;justify-items:center!important;overflow:hidden}
+.hero-backdrop span{writing-mode:vertical-rl!important;text-orientation:mixed;font-size:clamp(50px,6.8vw,100px)!important;line-height:1!important;letter-spacing:.015em!important;font-weight:900;white-space:nowrap!important;overflow:visible!important}
+.nav{position:fixed!important;top:0;z-index:95;width:100%;transition:transform .3s cubic-bezier(.2,.8,.3,1), background .25s ease,color .25s ease,box-shadow .25s ease;will-change:transform;backdrop-filter:none}
+.nav.nav-away{transform:translateY(-115%)}
+.nav.nav-scrolled{background:rgba(233,239,230,.96);box-shadow:0 4px 18px rgba(11,38,25,.07);backdrop-filter:blur(14px);padding-block:17px}
+.nav.nav-dark{background:rgba(20,30,27,.97);color:#edf4ea}
+.nav.nav-dark .dot{color:#b8dd99}
+.work-heading h2{font-size:clamp(36px,4vw,63px);margin:6px 0 25px!important}
+.work-viewport{flex:1 1 auto;min-height:0;margin-bottom:20px}
+.work-card{width:min(73vw,1070px);min-height:0;height:100%;box-shadow:0 16px 24px #0a161219}
+.work-description h3{font-size:clamp(32px,3.8vw,60px)}
+.work-facts{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.work-facts span{background:rgba(216,231,217,.085);border:1px solid rgba(196,219,200,.12);color:#d6e4d4;font-size:9px;padding:6px 9px}
+.work-visual{position:relative;min-height:0}
+.work-visual .visual-foot{font-size:10px}
+.extra-dialog{width:min(1100px,calc(100vw - 26px))}
+.extra-dialog .modal-inner{max-width:none;padding:clamp(22px,3vw,42px)}
+.extra-dialog h2 em{font-family:Georgia,serif;font-weight:400;color:#3b7c55}
+.extra-dialog .extra-home{grid-template-columns:minmax(190px,44%) 1fr;gap:clamp(16px,3vw,34px);align-items:center;margin:20px 0 32px}
+.extra-dialog .extra-copy{min-width:0}
+.extra-copy h3{font-family:Georgia,serif;font-size:clamp(27px,3vw,45px);letter-spacing:-.055em;line-height:1.08;text-transform:none;color:#1d3f2c;margin:0 0 15px}
+.extra-copy .extra-kicker{font-size:10px;letter-spacing:.19em;font-weight:900;color:#4c835e;margin:0 0 14px}
+.extra-copy p{font-size:15px;line-height:1.76;color:#3f5a4a}
+.home-illustration{background:linear-gradient(180deg,#d5e9e3,#e8f0e1 56%,#f4efe0 100%);aspect-ratio:1.6;border-radius:16px;overflow:hidden;position:relative;border:1px solid #d2dfd2;box-shadow:0 14px 25px #15362519}
+.home-illustration .mountain{position:absolute;bottom:23%;left:-8%;right:-8%;height:48%;clip-path:polygon(0 100%,24% 34%,38% 63%,57% 3%,76% 59%,91% 23%,100% 52%,100% 100%)}
+.home-illustration .mountain-back{bottom:32%;background:#a8c4bb;transform:scaleX(1.03);opacity:.87}
+.home-illustration .mountain-front{background:#6a9286;transform:translateY(13%)}
+.home-illustration .home-water{position:absolute;left:0;right:0;bottom:0;height:34%;background:repeating-linear-gradient(178deg,#7cb1ad 0 8px,#a9cbc0 9px 15px);opacity:.8}
+.home-illustration .home-sun{position:absolute;top:12%;right:18%;width:13%;aspect-ratio:1;background:#f7d2a0;border-radius:50%}
+.home-illustration span{position:absolute;z-index:3;bottom:7%;left:6%;font-size:11px;font-weight:900;letter-spacing:.19em;color:#1b4039;background:rgba(242,248,241,.75);padding:7px 10px;border-radius:20px}
+.extra-grid.extra-three{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.extra-grid article{border-color:#cbdfcd;background:#f9fbf6;padding:19px 18px;box-shadow:0 7px 18px #224c3110}
+.extra-grid article h3{font-size:17px;color:#1a3828;margin:11px 0 8px}
+.extra-grid article p{font-size:13.5px;line-height:1.7}
+.mini-illo{position:relative;height:78px;border-radius:14px;background:#dce9d8;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mini-illo>span{font-family:Georgia,serif;color:#4d7657;font-size:56px;line-height:1}
+.mini-illo i{position:absolute;right:20%;top:8%;color:#d69573;font-size:28px;font-style:normal;transform:rotate(15deg)}
+.craft-icon{background:#f2e6d8}.game-icon{background:#d5e2ed}.volunteer-icon{background:#e5ecdb}
+.education{margin-top:95px;padding:32px 0 50px;border-top:1px solid rgba(197,222,201,.21)}
+.education>.eyebrow{font-size:15px;letter-spacing:.19em;color:#badd9e;margin-bottom:15px}
+.education>h3{font-size:clamp(38px,5vw,76px);color:#f1f4ee;font-weight:750;line-height:1.07;letter-spacing:-.07em;margin:12px 0 42px;max-width:930px}
+.education>h3 em{font-family:Georgia,serif;font-weight:400;color:#b9daa4}
+.education-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:22px}
+.edu-card{background:#202d29;border:1px solid #526d5c;border-radius:17px;padding:clamp(22px,3vw,40px);min-width:0}
+.edu-top{display:flex;align-items:center;gap:16px;margin-bottom:27px}
+.edu-symbol{display:grid;place-items:center;background:#e5ede0;color:#2d5c3f;width:54px;height:54px;border-radius:15px;font:900 32px Georgia,serif}
+.edu-label{font-size:10px;letter-spacing:.17em;font-weight:900;color:#abc9b0}
+.edu-card h4{font-size:clamp(26px,2.6vw,40px);letter-spacing:-.055em;line-height:1.1;margin:0 0 8px;color:#eef3e9}
+.edu-card .edu-subdegree{color:#c2ddad;font-size:15px;font-weight:700;margin:0 0 12px;line-height:1.5}
+.edu-place{font-size:clamp(16px,1.35vw,20px)!important;font-weight:750;color:#e0eee2!important;margin:8px 0!important;line-height:1.5!important}
+.edu-date{font-size:13px!important;color:#bfceb9!important;line-height:1.6!important;margin:0 0 17px!important}
+.edu-description{font-size:15px!important;color:#b5c9b6!important;line-height:1.75!important}
+.edu-awards{margin-top:24px;border-top:1px solid rgba(220,240,217,.18);padding-top:21px}
+.edu-awards h5{color:#bbdfaa;text-transform:uppercase;letter-spacing:.11em;font-size:12px;margin:0 0 15px}
+.edu-awards ul{margin:0;padding-left:21px}.edu-awards li{color:#d7e4d8;line-height:1.65;font-size:14px;padding-left:5px;margin-bottom:8px}
+.footer{position:relative;overflow:hidden;min-height:455px}
+.footer h2,.footer .footer-links,.footer .eyebrow,.footer .copyright{position:relative;z-index:2}
+.footer h2{max-width:68%;margin-bottom:56px}
+.footer-bloom{position:absolute;z-index:1;right:3vw;top:17%;width:min(35vw,460px);aspect-ratio:1;opacity:.9;filter:drop-shadow(0 14px 10px #17432116)}
+.footer-bloom svg{width:100%;height:100%}
+.copyright{margin-top:110px}
+@media(max-width:1050px){.work-card{width:min(79vw,990px)}.work-heading h2{font-size:clamp(33px,4.1vw,54px)}.nav nav{gap:16px}}
+@media(max-width:720px){
+ .nav.nav-scrolled{padding:12px 20px}.nav.nav-dark{background:#15221a}
+ .hero-backdrop{grid-template-columns:repeat(4,minmax(0,1fr))!important;padding:12vh 4vw!important;gap:1vw!important;opacity:.055!important}
+ .hero-backdrop span{font-size:clamp(26px,8vw,57px)!important}
+ .work-viewport{margin-bottom:0;overflow-x:auto}.work-card{width:min(88vw,480px);height:auto;min-height:610px}
+ .extra-dialog .extra-home{grid-template-columns:1fr}.extra-grid.extra-three{grid-template-columns:1fr}
+ .education-grid{grid-template-columns:1fr}.education>h3{font-size:clamp(36px,10vw,54px)}.edu-card{padding:25px}
+ .footer-bloom{top:14%;right:-25%;width:min(80vw,350px);opacity:.38}.footer h2{max-width:100%}
+}
+@media(max-height:720px) and (min-width:721px){.work-viewport{margin-bottom:10px}.work-heading h2{margin-bottom:12px!important}.work-description h3{font-size:clamp(27px,3vw,46px)}.work-facts{margin:8px 0}}
+@media(prefers-reduced-motion:reduce){.nav{transition:none}}
+
+.extra-heading-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.extra-heading-row h2{margin-top:0;margin-bottom:10px}
+.extra-badge{width:clamp(94px,10vw,150px);height:auto;object-fit:contain;flex:none;margin-right:8px}
+@media(max-width:720px){.extra-badge{width:88px}.extra-heading-row{gap:8px}}
+.education .edu-symbol{color:#2d5c3f;font-size:32px;line-height:1}
+.education .edu-label{color:#abc9b0;font-size:10px;letter-spacing:.17em}
+@media(max-width:720px){
+ .customer-visual .pipe{display:none}
+ .customer-visual .stat-emblem{transform:translateY(-8px);font-size:88px}
+ .customer-visual .stat-emblem span{font-size:10px;line-height:1.4}
+}

@@ -1,0 +1,73 @@
+
+/* Version 7: finer details and accessible storytelling. */
+.logo{gap:3px;letter-spacing:-.065em}
+.logo .brand-flower{width:18px;height:18px;margin-left:1px}
+.mark{letter-spacing:-.04em}
+/* Keep compact hero icons near role title, leaving introductory paragraphs spacious. */
+.hero-social{display:flex;align-items:center;gap:10px;margin:14px 0 19px}
+.hero-social a{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #8fae9b;background:rgba(255,255,255,.35);border-radius:50%;color:#28513c;transition:transform .2s,background .2s,border-color .2s}
+.hero-social a:hover,.hero-social a:focus-visible{background:#25533d;color:#fff;transform:translateY(-2px);border-color:#25533d}
+.hero-social svg{width:17px;height:17px}
+/* Fraud 0.17% always sits inside the illustrated panel, above the caption. */
+.fraud-display{width:min(75%,300px);max-width:300px;position:relative;padding-bottom:88px;transform:translateY(-4px)}
+.fraud-dots{gap:clamp(7px,.8vw,12px)}
+.fraud-emblem{position:absolute;right:0;bottom:12px;min-width:144px;min-height:70px;display:grid;place-content:center;padding:11px 18px;z-index:2;font-size:30px;text-align:center}
+.fraud-emblem small{font-size:9px;letter-spacing:.11em;white-space:nowrap;margin-top:1px}
+.fraud-visual .visual-foot{bottom:13px}
+/* Photo journal: no cropped mountains or hidden controls. */
+.extra-dialog{width:min(950px,calc(100vw - 22px))}
+.extra-dialog .extra-home{grid-template-columns:minmax(270px,45%) 1fr;gap:clamp(20px,3vw,37px);margin:18px 0 24px}
+.kashmir-gallery{min-width:0;width:100%;border-radius:17px;overflow:hidden;background:#d8e6e0;border:1px solid #c2d3c3;box-shadow:0 8px 25px #1a3e2c22}
+.kashmir-gallery-images{height:clamp(230px,28vw,320px);position:relative;overflow:hidden}
+.kashmir-slide{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.035);transition:opacity 1.05s ease,transform 5.8s ease;pointer-events:none}
+.kashmir-slide.is-active{opacity:1;transform:scale(1)}
+.kashmir-caption{position:absolute;z-index:1;bottom:0;left:0;right:0;color:#fff;padding:34px 20px 15px;background:linear-gradient(transparent,rgba(13,35,28,.76));display:flex;flex-direction:column;gap:4px}
+.kashmir-caption-label{font-size:9px;font-weight:850;letter-spacing:.17em}
+.kashmir-caption strong{font-size:20px;letter-spacing:-.025em}
+.kashmir-gallery-controls{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:#e7f0e5}
+.kashmir-gallery-controls>button{background:none;border:0;color:#1a4b33;font-size:24px;width:34px;height:30px;cursor:pointer;display:grid;place-items:center;border-radius:8px}
+.kashmir-gallery-controls>button:hover,.kashmir-gallery-controls>button:focus-visible{background:#c8e0c3}
+.kashmir-dots{display:flex;align-items:center;gap:7px}
+.kashmir-dot{height:9px;width:9px;border:0;border-radius:50%;background:#a7bdae;cursor:pointer;padding:0;transition:width .3s,background .3s}
+.kashmir-dot.is-active{width:23px;border-radius:8px;background:#2e684a}
+.extra-dialog .extra-home .extra-copy h3{font-size:clamp(23px,2.6vw,33px)}
+/* Personal journal replaces three feature cards with an illustrated timeline. */
+.personal-journal{position:relative;margin:18px 0 3px;padding:15px 0 0}
+.journal-heading{border-bottom:1px solid #acc7b0;padding-bottom:15px}
+.journal-heading>span{display:block;font-size:10px;letter-spacing:.18em;font-weight:900;color:#3b7957}
+.journal-heading>p{font:italic 18px Georgia,serif;color:#315341;margin:8px 0 0}
+.journal-entry{display:grid;grid-template-columns:116px minmax(0,1fr);align-items:start;gap:18px;position:relative;padding:21px 0;border-bottom:1px solid #c7d8c8}
+.journal-entry:last-child{border-bottom:0}
+.journal-side{display:flex;align-items:center;gap:7px}
+.journal-index{font:italic 26px Georgia,serif;color:#5d916f}
+.journal-illustration{width:78px;height:78px;display:grid;place-items:center;border-radius:20px;background:#f0e5d9;transform:rotate(-6deg);transition:transform .35s ease}
+.journal-entry:nth-child(3) .journal-illustration{background:#dfebef;transform:rotate(5deg)}
+.journal-entry:nth-child(4) .journal-illustration{background:#e5efdd;transform:rotate(-3deg)}
+.journal-entry:hover .journal-illustration{transform:rotate(0deg) scale(1.06)}
+.journal-illustration svg{height:66px;width:66px}
+.journal-story{min-width:0}
+.journal-type{font-size:10px!important;letter-spacing:.13em!important;color:#678874!important;font-weight:900!important;margin:3px 0 7px!important}
+.journal-story h3{margin:0 0 10px!important;color:#193c2d!important;font-size:clamp(20px,2.2vw,26px)!important;letter-spacing:-.025em!important;text-transform:none!important}
+.journal-story>p:last-child{margin:0!important;font-size:14.5px!important;line-height:1.78!important;color:#426153!important}
+.edu-courses{margin-top:14px}
+.edu-courses .awards-reveal li{color:#dcebdd}
+@media(max-width:1100px){.fraud-display{width:min(72%,260px);padding-bottom:74px}.fraud-emblem{font-size:26px;min-width:131px}}
+@media(max-width:720px){
+ .hero-social{margin-top:12px;margin-bottom:15px}
+ .hero-social a{height:32px;width:32px}
+ .fraud-display{width:70%;max-width:215px;padding-bottom:66px;transform:translateY(-1px)}
+ .fraud-emblem{font-size:21px;min-height:53px;min-width:110px;padding:8px;bottom:8px}
+ .fraud-emblem small{font-size:7.5px}
+ .fraud-visual .visual-foot{bottom:8px}
+ .extra-dialog .extra-home{grid-template-columns:1fr;gap:18px}
+ .kashmir-gallery-images{height:235px}
+ .journal-entry{grid-template-columns:77px minmax(0,1fr);gap:12px;padding:17px 0}
+ .journal-side{flex-direction:column;gap:5px}
+ .journal-illustration{width:65px;height:65px}
+ .journal-illustration svg{width:55px;height:55px}
+ .journal-story h3{font-size:22px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-social a,.journal-illustration,.kashmir-slide,.kashmir-dot{transition:none!important}
+ .kashmir-slide{transform:none!important}
+}

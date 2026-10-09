@@ -1,0 +1,6 @@
+.mark .brand-flower{width:18px;height:18px;margin-top:-12px;display:inline-block;color:#4d8e75;vertical-align:middle;transition:transform .55s ease}.mark:hover .brand-flower{transform:rotate(60deg)}
+/* Explore further panel keeps dark text on its fixed pale background in either theme */
+.case-proof{background:#f4f8f2!important;color:#204033!important;border-color:#bfd3c2!important}
+.case-proof b,.case-proof p,.case-proof .link-out{color:#1f4f39!important}
+.case-proof .link-out{display:inline-block;white-space:normal;margin:4px 17px 4px 0;padding:5px 0;border-bottom:2px solid #37795a;font-weight:850;line-height:1.4}
+.case-proof .link-out:hover,.case-proof .link-out:focus-visible{color:#a34d2b!important;border-color:#a34d2b}

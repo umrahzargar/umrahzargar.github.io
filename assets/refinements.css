@@ -1,0 +1,113 @@
+/* Iteration 03 — restrained editorial typography, clear backdrop and scroll-scrubbed 3D portraits */
+body{font-family:Inter,"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,Arial,sans-serif}
+.hero-backdrop{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));padding:18vh 4vw 7vh;gap:0 5vw;opacity:.085;align-items:center;justify-items:center}
+.hero-backdrop span{writing-mode:horizontal-tb;overflow:visible;font-size:clamp(58px,8.5vw,150px);line-height:1;font-weight:850;letter-spacing:-.08em;white-space:nowrap}
+.chapter h1,.chapter h2{font-family:Inter,"Segoe UI",system-ui,Arial,sans-serif;font-weight:720;line-height:1.09;letter-spacing:-.058em;font-size:clamp(43px,4.1vw,72px);max-width:640px;margin-bottom:24px}
+.chapter h2{font-size:clamp(41px,4vw,68px)}
+.chapter em{font-family:inherit;font-style:italic;font-weight:520;letter-spacing:-.06em}
+.chapter-index{margin-bottom:24px}
+.role-line{font-size:clamp(10px,.94vw,13px);letter-spacing:.105em}
+.chapter .lede{max-width:590px;font-size:clamp(14px,1.06vw,17px);line-height:1.63;margin-bottom:16px}
+.chapter-link{margin-top:13px}
+.journey{height:490vh}
+.portrait-stage{perspective:1650px}
+.portrait-stack{transform-style:preserve-3d;filter:none;transform:rotateY(0deg);will-change:transform}
+.portrait,.portrait.active,.portrait.is-entering,.portrait.is-exiting{animation:none!important;transition:none!important;opacity:0;transform:rotateY(calc(var(--face)*180deg));backface-visibility:hidden;-webkit-backface-visibility:hidden;filter:drop-shadow(0 18px 20px rgba(28,61,39,.14));will-change:transform,opacity}
+.portrait.is-visible{opacity:1!important}
+.portrait[data-portrait="0"]{--face:0}
+.portrait[data-portrait="1"]{--face:1}
+.portrait[data-portrait="2"]{--face:2}
+.portrait[data-portrait="3"]{--face:3}
+/* Gallery is a true screen-sized panel: bottom links no longer fall below the viewport. */
+.work-sticky{display:flex;flex-direction:column;min-height:0;height:100vh;height:100svh;overflow:hidden;padding:clamp(15px,2.2vh,26px) 0 12px}
+.work-heading{flex:0 0 auto;width:100%}
+.work-heading .eyebrow{font-size:10px;letter-spacing:.18em;margin:0 0 10px}
+.work-heading h2{font-size:clamp(42px,4.5vw,72px);line-height:1.04;margin:0 0 clamp(14px,2.3vh,22px)}
+.work-viewport{flex:1 1 auto;min-height:0;overflow:hidden}
+.work-track{height:100%;align-items:stretch}
+.work-card{height:100%;min-height:0;position:relative;transition:border-color .2s ease,box-shadow .2s ease;overflow:hidden}
+.work-card:hover,.work-card:focus-within{border-color:#a0d4a0;box-shadow:0 0 0 1px #7da889}
+.work-card-hit{position:absolute;inset:0;width:100%;height:100%;z-index:2;cursor:pointer;border:0;background:transparent;appearance:none}
+.work-card-hit:focus-visible{outline:4px solid #f3be89;outline-offset:-6px}
+.work-visual{min-height:0}
+.work-description{padding:clamp(20px,2.6vw,42px);min-height:0;position:relative}
+.work-description h3{font-size:clamp(29px,3.35vw,56px);margin:clamp(12px,2vh,19px) 0 clamp(10px,1.5vh,17px);line-height:1.08}
+.work-description p{font-size:clamp(12.5px,1.05vw,16px);line-height:1.52}
+.work-bottom{position:relative;z-index:3;width:100%;margin-top:auto;gap:10px;padding-top:14px;justify-content:flex-start;font-size:10px}
+.work-bottom>span{width:100%;font-size:10px}
+.work-bottom a,.quick-view{position:relative;z-index:3;display:inline-flex;align-items:center;justify-content:center;min-height:39px;font-size:10px;letter-spacing:.04em;font-weight:900;padding:8px 12px;border:1px solid #8b9f91;border-radius:5px;color:#eaf4e8;background:#1d3029;cursor:pointer;text-decoration:none}
+.work-bottom a:hover,.quick-view:hover{background:#c3deb2;color:#10251b;border-color:#c3deb2}
+.quick-view{border-color:#a5d5a6;background:#b9df9b;color:#152b20}
+.work-progress{flex:0 0 auto;padding:12px 5vw 3px}
+.work-scroll-hint{margin-left:auto}
+/* Project details dialog */
+.modal-open{overflow:hidden}
+.project-dialog{border:1px solid #9fb6a2;border-radius:16px;padding:0;box-shadow:0 30px 110px rgba(0,0,0,.48);background:#e8eee4;color:#1c3228;width:min(810px,calc(100vw - 36px));max-width:none;max-height:min(88vh,850px);overflow:auto;font-family:Inter,"Segoe UI",system-ui,Arial,sans-serif}
+.project-dialog::backdrop{background:rgba(6,18,14,.82);backdrop-filter:blur(6px)}
+.modal-inner{padding:clamp(23px,4.2vw,54px)}
+.modal-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.modal-kicker{font-size:11px;font-weight:850;letter-spacing:.19em;color:#417355}
+.modal-close{border:1px solid #99b3a0;background:transparent;color:#1a3c2a;width:43px;height:43px;border-radius:50%;font-size:19px;cursor:pointer}
+.modal-close:hover{background:#244735;color:white}
+.project-dialog h2{font-size:clamp(31px,4vw,52px);line-height:1.06;letter-spacing:-.055em;margin:22px 0 17px;font-weight:750}
+.modal-intro{font-size:clamp(16px,1.3vw,19px);line-height:1.6;color:#345546;margin:0 0 24px}
+.modal-detail-grid{border-top:1px solid #b5cab7;border-bottom:1px solid #b5cab7;display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:25px 0}
+.project-dialog h3{font-size:12px;letter-spacing:.12em;font-weight:850;text-transform:uppercase;color:#3f7653;margin:0 0 10px}
+.modal-detail-grid p{font-size:14px;line-height:1.65;margin:0;color:#294538}
+.modal-tools{margin-top:25px}
+.modal-skills{display:flex;flex-wrap:wrap;gap:8px}
+.modal-skills span{padding:8px 12px;border:1px solid #a3bea8;border-radius:100px;background:#f4f6f0;color:#294436;font-size:12px;font-weight:650}
+.modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}
+.modal-actions a{display:inline-flex;align-items:center;min-height:47px;border-radius:6px;border:1px solid #1c4530;padding:11px 18px;font-size:12px;font-weight:850;letter-spacing:.04em;background:#1b3d2d;color:#edf5e8}
+.modal-actions a:hover{background:#376d4b}
+.modal-caveat{font-size:11px;line-height:1.55;color:#607867;margin:20px 0 0}
+@media(max-height:740px) and (min-width:721px){
+ .work-sticky{padding-top:12px;padding-bottom:7px}
+ .work-heading .eyebrow{margin:0 0 6px}
+ .work-heading h2{font-size:clamp(40px,4vw,57px);margin-bottom:10px}
+ .work-description{padding:clamp(14px,2vw,28px)}
+ .work-description h3{font-size:clamp(27px,3vw,43px);margin:9px 0}
+ .work-description p{font-size:12.5px;line-height:1.4}
+ .work-bottom{padding-top:8px}
+ .work-progress{padding-top:6px}
+}
+@media(max-width:900px) and (min-width:721px){
+ .work-description{padding:18px}
+ .work-card{grid-template-columns:43% 57%}
+ .work-description h3{font-size:clamp(28px,3.6vw,41px)}
+ .work-bottom a,.quick-view{font-size:9px;min-height:35px;padding:6px 8px}
+ .chapter h1,.chapter h2{font-size:clamp(38px,5.2vw,54px)}
+ .chapter .lede{font-size:14px;line-height:1.55}
+ .hero-backdrop span{font-size:clamp(54px,8vw,100px)}
+}
+@media(max-width:720px){
+ .hero-backdrop{padding:10vh 3vw;opacity:.065}
+ .hero-backdrop span{font-size:clamp(44px,13vw,72px)}
+ .journey{height:auto}
+ .chapter h1,.chapter h2{font-size:clamp(40px,9vw,59px)}
+ .chapter .lede{font-size:15px;line-height:1.68}
+ .work-sticky{position:relative;display:block;height:auto;min-height:0;overflow:visible;padding:50px 0 22px}
+ .work-heading h2{font-size:clamp(43px,11vw,65px);margin:8px 0 20px}
+ .work-viewport{overflow-x:auto;overflow-y:hidden;min-height:0;scroll-snap-type:x mandatory}
+ .work-track{height:auto;min-height:0;transform:none!important;align-items:stretch}
+ .work-card{width:min(88vw,480px);min-height:610px;height:auto;grid-template-columns:1fr;grid-template-rows:230px 1fr;scroll-snap-align:start}
+ .work-description{padding:22px;min-height:360px}
+ .work-description h3{font-size:37px;margin:15px 0 13px}
+ .work-description p{font-size:13px;line-height:1.55}
+ .work-bottom{padding-top:15px;gap:8px}
+ .work-progress{padding:15px 20px}
+ .modal-detail-grid{grid-template-columns:1fr;gap:20px}
+ .modal-inner{padding:22px}
+ .project-dialog h2{font-size:33px}
+}
+@media(prefers-reduced-motion:reduce){
+ .work-card,.modal-actions a,.quick-view{transition:none!important}
+ .journey{height:auto}
+ .portrait-stack{transform:none!important}
+ .project-dialog::backdrop{backdrop-filter:none}
+}
+/* Hide the outgoing chapter immediately so two paragraphs do not overlap at the flip midpoint. */
+@media(min-width:721px) and (prefers-reduced-motion:no-preference){
+ .chapter:not(.active){opacity:0!important;visibility:hidden!important;pointer-events:none;transition:none!important}
+ .chapter.active{transition:opacity .25s ease,transform .32s ease}
+}
