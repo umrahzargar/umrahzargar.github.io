@@ -1,0 +1,6 @@
+/* Consistent brand/navigation and accessible case-study reading contrast. */
+.site-header .mark{display:inline-flex;align-items:center;gap:4px;letter-spacing:-.055em}
+.site-header .mark .brand-flower{margin-top:-12px;width:18px;height:18px;flex:none;color:#5c9670}
+:root[data-theme=dark] .case-proof .link-out{color:#1a3d2c!important;text-decoration:underline;text-decoration-thickness:1.5px}
+:root[data-theme=dark] .case-proof .link-out:hover{color:#14452b!important}
+@media(max-width:720px){.site-header .mark .brand-flower{width:15px;height:15px;margin-top:-7px}}

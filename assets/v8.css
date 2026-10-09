@@ -1,0 +1,36 @@
+/* Version 8: viewport-safe hero controls and tighter top navigation. The approved visual language is unchanged. */
+@media (min-width:721px){
+  .nav{padding-top:18px!important;padding-bottom:17px!important}
+  .nav.nav-scrolled{padding-top:13px!important;padding-bottom:13px!important}
+  .intro-copy{min-height:100svh;max-height:100svh;box-sizing:border-box; padding-top:105px; padding-bottom:92px;}
+  .chapters{min-height:0;height:clamp(415px,60svh,535px)}
+  .scroll-instruction{bottom:28px;left:5.15vw}
+  .chapter-dots{bottom:33px}
+  .portrait-counter{position:absolute;z-index:7;bottom:27px;right:5.15vw;font-size:12px;letter-spacing:.18em;white-space:nowrap;color:#456c54}
+  .chapter-link{position:relative;z-index:10}
+}
+@media (min-width:721px) and (max-height:870px){
+  .intro-copy{padding-top:95px;padding-bottom:85px}
+  .chapters{height:clamp(375px,55svh,470px)}
+  .chapter-index{margin-bottom:17px}
+  .chapter h1,.chapter h2{font-size:clamp(40px,4.15vw,69px);margin-bottom:16px;line-height:1.05}
+  .role-line{font-size:clamp(10px,.94vw,13px);margin-bottom:13px;line-height:1.48}
+  .chapter .lede{font-size:clamp(13.4px,1.08vw,17px);line-height:1.52;margin-bottom:12px}
+  .hero-social{margin-bottom:16px}
+  .chapter-link{margin-top:9px;padding-bottom:7px}
+}
+@media (min-width:721px) and (max-height:700px){
+  .intro-copy{padding-top:78px;padding-bottom:66px}
+  .chapters{height:clamp(315px,53svh,375px)}
+  .chapter-index{font-size:10px;margin-bottom:10px}
+  .chapter h1,.chapter h2{font-size:clamp(36px,3.7vw,57px);margin-bottom:10px}
+  .role-line{margin-bottom:8px}
+  .hero-social{margin:6px 0 10px}
+  .chapter .lede{font-size:13px;line-height:1.4;margin-bottom:8px}
+  .chapter-link{margin-top:5px}
+}
+@media (max-width:720px){
+  .nav{padding-top:12px!important;padding-bottom:10px!important}
+  .nav.nav-scrolled{padding-top:10px!important;padding-bottom:10px!important}
+  .intro-copy{max-height:none}
+}

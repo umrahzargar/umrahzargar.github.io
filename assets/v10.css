@@ -1,0 +1,111 @@
+/* V10: rebalance sections 02-04 vertically without altering illustration, palette or scroll behaviours. */
+@media (min-width: 721px) {
+  .chapter[data-chapter="1"],
+  .chapter[data-chapter="2"],
+  .chapter[data-chapter="3"] {
+    top: 50%;
+    transform: translateY(calc(-50% + 12px));
+  }
+  .chapter[data-chapter="1"].active,
+  .chapter[data-chapter="2"].active,
+  .chapter[data-chapter="3"].active {
+    transform: translateY(-50%);
+  }
+}
+/* Give each chapter heading a full line on large desktops,
+   matching the approved version instead of wrapping on to a second line. */
+@media (min-width:721px) {
+  .chapter[data-chapter="1"] h2,
+  .chapter[data-chapter="2"] h2,
+  .chapter[data-chapter="3"] h2 {
+    max-width: 100%;
+    font-size: clamp(40px,4.15vw,64px);
+  }
+}
+/* Spacious editorial rhythm for wide screens: more space within the copy block,
+   and substantially less empty space outside it. */
+@media (min-width: 1201px) and (min-height: 800px) {
+  .chapter[data-chapter="1"] .chapter-index,
+  .chapter[data-chapter="2"] .chapter-index,
+  .chapter[data-chapter="3"] .chapter-index {margin-bottom: 34px;}
+  .chapter[data-chapter="1"] h2,
+  .chapter[data-chapter="2"] h2,
+  .chapter[data-chapter="3"] h2 {margin-bottom: 42px;line-height:1.11;}
+  .chapter[data-chapter="1"] .lede,
+  .chapter[data-chapter="2"] .lede,
+  .chapter[data-chapter="3"] .lede {font-size:clamp(16.5px,1.2vw,18px);line-height:1.82;margin-bottom:22px;}
+  .chapter[data-chapter="1"] .chapter-link,
+  .chapter[data-chapter="2"] .chapter-link,
+  .chapter[data-chapter="3"] .chapter-link {margin-top:23px;}
+}
+/* Standard laptops: keep the generous rhythm, but accommodate line wrapping. */
+@media (min-width:721px) and (max-width:1200px) and (min-height:800px) {
+  .chapter[data-chapter="1"] .chapter-index,
+  .chapter[data-chapter="2"] .chapter-index,
+  .chapter[data-chapter="3"] .chapter-index {margin-bottom:31px;}
+  .chapter[data-chapter="1"] h2,
+  .chapter[data-chapter="2"] h2,
+  .chapter[data-chapter="3"] h2 {margin-bottom:39px;line-height:1.10;}
+  .chapter[data-chapter="1"] .lede,
+  .chapter[data-chapter="2"] .lede,
+  .chapter[data-chapter="3"] .lede {line-height:1.79;margin-bottom:21px;}
+  .chapter[data-chapter="1"] .chapter-link,
+  .chapter[data-chapter="2"] .chapter-link,
+  .chapter[data-chapter="3"] .chapter-link {margin-top:21px;}
+}
+@media (min-width: 1201px) and (min-height: 701px) and (max-height: 799px) {
+  .chapter[data-chapter="1"] .chapter-index,
+  .chapter[data-chapter="2"] .chapter-index,
+  .chapter[data-chapter="3"] .chapter-index {margin-bottom:29px;}
+  .chapter[data-chapter="1"] h2,
+  .chapter[data-chapter="2"] h2,
+  .chapter[data-chapter="3"] h2 {margin-bottom:31px;line-height:1.1;}
+  .chapter[data-chapter="1"] .lede,
+  .chapter[data-chapter="2"] .lede,
+  .chapter[data-chapter="3"] .lede {line-height:1.7;margin-bottom:18px;}
+  .chapter[data-chapter="1"] .chapter-link,
+  .chapter[data-chapter="2"] .chapter-link,
+  .chapter[data-chapter="3"] .chapter-link {margin-top:18px;}
+}
+@media (min-width:721px) and (max-width:1200px) and (min-height:701px) and (max-height:799px) {
+  .chapter[data-chapter="1"] .chapter-index,
+  .chapter[data-chapter="2"] .chapter-index,
+  .chapter[data-chapter="3"] .chapter-index {margin-bottom:29px;}
+  .chapter[data-chapter="1"] h2,
+  .chapter[data-chapter="2"] h2,
+  .chapter[data-chapter="3"] h2 {margin-bottom:32px;line-height:1.1;}
+  .chapter[data-chapter="1"] .lede,
+  .chapter[data-chapter="2"] .lede,
+  .chapter[data-chapter="3"] .lede {font-size:15px;line-height:1.74;margin-bottom:19px;}
+  .chapter[data-chapter="1"] .chapter-link,
+  .chapter[data-chapter="2"] .chapter-link,
+  .chapter[data-chapter="3"] .chapter-link {margin-top:18px;}
+}
+/* Small desktop windows have less height: maintain readability and clear controls. */
+@media (min-width:721px) and (max-height:700px) {
+  .chapter[data-chapter="1"] .chapter-index,
+  .chapter[data-chapter="2"] .chapter-index,
+  .chapter[data-chapter="3"] .chapter-index {margin-bottom:17px;}
+  .chapter[data-chapter="1"] h2,
+  .chapter[data-chapter="2"] h2,
+  .chapter[data-chapter="3"] h2 {margin-bottom:18px;line-height:1.06;}
+  .chapter[data-chapter="1"] .lede,
+  .chapter[data-chapter="2"] .lede,
+  .chapter[data-chapter="3"] .lede {line-height:1.52;margin-bottom:11px;}
+  .chapter[data-chapter="1"] .chapter-link,
+  .chapter[data-chapter="2"] .chapter-link,
+  .chapter[data-chapter="3"] .chapter-link {margin-top:8px;}
+}
+
+/* Slightly tighter tablet rhythm to respect a narrow text column. */
+@media (min-width:721px) and (max-width:900px) and (min-height:701px) {
+  .chapter[data-chapter="1"] .lede,
+  .chapter[data-chapter="2"] .lede,
+  .chapter[data-chapter="3"] .lede {font-size:14px;line-height:1.74;margin-bottom:15px;}
+  .chapter[data-chapter="1"] h2,
+  .chapter[data-chapter="2"] h2,
+  .chapter[data-chapter="3"] h2 {margin-bottom:29px;}
+  .chapter[data-chapter="1"] .chapter-index,
+  .chapter[data-chapter="2"] .chapter-index,
+  .chapter[data-chapter="3"] .chapter-index {margin-bottom:25px;}
+}
