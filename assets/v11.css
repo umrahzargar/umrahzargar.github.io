@@ -1,0 +1,13 @@
+/* V11: gently lift all four hero text chapters while keeping the portrait and
+   bottom navigation indicators in their original positions. */
+@media (min-width: 721px) {
+  .journey .chapters {
+    transform: translateY(clamp(-50px, -5.4svh, -28px));
+  }
+}
+/* Short laptop displays have less room above the bottom progress indicators. */
+@media (min-width: 721px) and (max-height: 700px) {
+  .journey .chapters {
+    transform: translateY(-15px);
+  }
+}
